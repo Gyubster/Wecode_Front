@@ -4,13 +4,11 @@
     margin:0;
     padding:0;
     color:#000;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
     box-sizing: border-box;
 }
 
 .fn-font {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
 }
 
 ul {
@@ -22,13 +20,17 @@ a {
     outline: none;
 }
 
-header{
+header {
     width:100%;
     height:80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f2f2f2;
+    background-color: #fefefe;
+}
+
+header > * {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 header > h2 {
@@ -61,23 +63,25 @@ header ul > li > a.current{
 }
 
 header ul > li > a:hover:not(.current){
-    background-color: #808080;
-    color:#f2f2f2;
+    background-color: #90CAF9;
+    color:#fefefe;
 }
 
+/*main*/
 #Main{
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(Photo/MainBackground.jpg);
     background-size: cover;
     background-position: 0% 20%;
     width:100%;
-    height:1000px;
+    height:800px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#Main * {
+#Main *{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
     color:white;
 }
 
@@ -86,40 +90,238 @@ header ul > li > a:hover:not(.current){
 }
 
 #Main p {
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 30px 0;
 }
 
-.btn {
-    width:120px;
-    padding: 8px 12px;
-    border:3px solid #ddd;
-    background-color: #70aa96;
+
+/*aboutme*/
+#AboutMe {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+}
+
+#AboutMe > .ImgBox {
+    flex: 5;
+    text-align: center;
+}
+
+.Selfie {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 10px;
+    border-color: black;
+    border-radius: 70%;
+}
+
+#AboutMe > .ImgBox > .ShortIntro > h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+#AboutMe > .ImgBox > .ShortIntro > u {
+    text-decoration: none;
+    border-bottom: 10px solid black;
+    margin-bottom: 5px;
+}
+
+.ShortIntro > p {
+    font-size: 15px;
+}
+
+.LongIntro {
+    text-align: center;
+    flex: 7;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.LongIntro > h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.highlight{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    background-color: #90CAF9;
+}
+
+/*projects*/
+#Projects {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: center;
+}
+
+#Projects > .ProjectHeader > h1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*contactme*/
+#ContactMe {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+#ContactMe > body {
+    background-color: #444442;
+    padding-top: 85px;
+}
+
+#ContactMe > .container > .row > h1 {
+    font-family:"Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: Black;
+    text-align: center;
+}
+
+
+#ContactMe > h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
     border-radius: 4px;
 }
 
-.btn:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
 }
 
-#AboutMe{
-    width:100%;
-    height:1000px;
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+input, textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,textarea:focus {
+    outline: 0;
+}
+
+input:focus ~ span, textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    float: right;
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+    0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+    0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+}
+
+input[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
 }
 
 /*footer*/
-footer{
+footer {
     padding: 30px 0;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: white;
 }
 
-.FooterIcon{
+.FooterIcon {
     list-style: none;
     margin-bottom: 10px;
 }
 
 /*아이콘 폰트는 font-size로 크기 조절 가능*/
-.FooterIcon li{
+.FooterIcon li {
     font-size: 30px;
     margin-left: 10px;
     display: inline-flex;
@@ -127,10 +329,14 @@ footer{
     justify-content: space-between;
 }
 
-.FooterCopyright *{
+.FooterCopyright * {
     color: #808080;
     font-size: 10px;
     align-items: center;
     font-family:"Open Sans", snas-serif;
 }
 
+.FooterMenu > a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 8px;
+}
